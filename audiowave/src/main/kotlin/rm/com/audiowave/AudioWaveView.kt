@@ -208,11 +208,6 @@ class AudioWaveView : View {
   fun setRawData(raw: ByteArray, callback: OnSamplingListener) {
     setRawData(raw) { callback.onComplete() }
   }
-
-
-  fun setRawDataOther(raw: ByteArray, callback: OnSamplingListener) {
-    setRawData(raw) { callback.onComplete() }
-  }
   
   @JvmOverloads
   fun setRawData(raw: ByteArray, callback: () -> Unit = {}) {
