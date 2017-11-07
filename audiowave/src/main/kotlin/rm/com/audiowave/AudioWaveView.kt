@@ -73,6 +73,8 @@ class AudioWaveView : View {
       postInvalidate()
     }
 
+
+
   var progress: Float = 0F
     set(value) {
       require(value in 0..100) { "Progress must be in 0..100" }
@@ -207,6 +209,11 @@ class AudioWaveView : View {
     setRawData(raw) { callback.onComplete() }
   }
 
+
+  fun setRawDataOther(raw: ByteArray, callback: OnSamplingListener) {
+    setRawData(raw) { callback.onComplete() }
+  }
+  
   @JvmOverloads
   fun setRawData(raw: ByteArray, callback: () -> Unit = {}) {
     MAIN_THREAD.postDelayed({
