@@ -2,6 +2,8 @@
 <resources>
   <declare-styleable name="AudioWaveView">
     <attr format="color" name="waveColor"/>
+    <attr format="color" name="rangeColor"/>
+      <attr format="color" name="progressColor"/>
     <attr format="dimension" name="chunkWidth"/>
     <attr format="dimension" name="chunkHeight"/>
     <attr format="dimension" name="minChunkHeight"/>
